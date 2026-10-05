@@ -1,0 +1,6 @@
+{
+  "name": "Continuum — Apple-Grade Universal Clipboard",
+  "description": "An ultra-clean, elegant online clipboard crafted with Apple design principles. Instant cross-device sync, smart format detection, ephemeral clips, and fluid micro-interactions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

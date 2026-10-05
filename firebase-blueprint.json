@@ -1,0 +1,51 @@
+{
+  "entities": {
+    "Clip": {
+      "title": "Clip",
+      "description": "A single online clipboard item",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the clip"
+        },
+        "content": {
+          "type": "string",
+          "description": "Content of the clip, text, code, or url"
+        },
+        "type": {
+          "type": "string",
+          "enum": ["text", "code", "url", "color", "image"],
+          "description": "Auto-detected type of the clip"
+        },
+        "language": {
+          "type": "string",
+          "description": "Programming language for code clips"
+        },
+        "colorHex": {
+          "type": "string",
+          "description": "Hex value for color clips"
+        },
+        "colorRgb": {
+          "type": "string",
+          "description": "RGB value for color clips"
+        },
+        "createdAt": {
+          "type": "number",
+          "description": "Timestamp in milliseconds when clip was created"
+        },
+        "copyCount": {
+          "type": "number",
+          "description": "Number of times clip was copied"
+        }
+      },
+      "required": ["id", "content", "type", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/clips/{clipId}": {
+      "schema": "Clip",
+      "description": "Shared online clipboard collection"
+    }
+  }
+}
